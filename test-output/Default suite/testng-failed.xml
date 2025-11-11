@@ -5,22 +5,13 @@
     <classes>
       <class name="org.healthfirst.runner.RegrassionQA">
         <methods>
-          <include name="runScenario" invocation-numbers="2"/>
-          <include name="bafterSuite"/>
+          <include name="runScenario" invocation-numbers="0 1 2"/>
           <include name="tearDownClass"/>
+          <include name="afterSuite"/>
           <include name="beforeSuite"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- org.healthfirst.runner.RegrassionQA -->
-      <class name="org.healthfirst.runner.RunnerQA_TestNG">
-        <methods>
-          <include name="bafterSuite"/>
-          <include name="beforeSuite"/>
-          <include name="runScenario" invocation-numbers="2"/>
-          <include name="tearDownClass"/>
-          <include name="setUpClass"/>
-        </methods>
-      </class> <!-- org.healthfirst.runner.RunnerQA_TestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

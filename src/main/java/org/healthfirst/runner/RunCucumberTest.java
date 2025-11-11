@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 				"de.monochromata.cucumber.report.PrettyReports:target/cucumber", "html:target/pretty-cucumber" }
 )
 
-public class RegrassionQA extends AbstractTestNGCucumberTests {
+public class RunCucumberTest extends AbstractTestNGCucumberTests {
 	@BeforeSuite
 	public void beforeSuite() {
 		System.out.println("======before suite====");

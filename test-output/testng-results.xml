@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T23:27:14 EDT" name="Suite" finished-at="2025-07-03T23:28:18 EDT" duration-ms="63712">
+  <suite started-at="2025-08-26T21:32:40 EDT" name="Default suite" finished-at="2025-08-26T21:34:20 EDT" duration-ms="100342">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-03T23:27:14 EDT" name="Test" finished-at="2025-07-03T23:28:18 EDT" duration-ms="63712">
+    <test started-at="2025-08-26T21:32:40 EDT" name="Default test" finished-at="2025-08-26T21:34:20 EDT" duration-ms="100342">
       <class name="org.healthfirst.runner.RegrassionQA">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:27:14 EDT" name="beforeSuite" finished-at="2025-07-03T23:27:14 EDT" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:32:40 EDT" name="beforeSuite" finished-at="2025-08-26T21:32:40 EDT" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:27:14 EDT" name="setUpClass" finished-at="2025-07-03T23:27:14 EDT" duration-ms="280" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:32:40 EDT" name="setUpClass" finished-at="2025-08-26T21:32:40 EDT" duration-ms="336" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:27:14 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-03T23:27:23 EDT" duration-ms="8954" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:32:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-26T21:33:25 EDT" duration-ms="44634" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -31,10 +31,121 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:27080
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MHK', ip: '192.168.12.101', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:27080
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MHK', ip: '192.168.12.101', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+at org.healthfirst.pages.MemberLoginPortal.enterUsername(MemberLoginPortal.java:34)
+at org.healthfirst.steps.HomePageStep.i_enter_username_as(HomePageStep.java:54)
+at ✽.I enter username as "mahak247"(file:///C:/Users/mahmu/OneDrive/Desktop/OSA0521202324A/eclipse-workspace/org.healthfirst/src/main/java/org/healthfirst/features/MemberLoginPortal.feature:9)
+Caused by: java.net.ConnectException: Failed to connect to localhost/[0:0:0:0:0:0:0:1]:27080
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:247)
+at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:165)
+at okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:257)
+at okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:135)
+at okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:114)
+at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:126)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+at okhttp3.RealCall.execute(RealCall.java:77)
+at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:155)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+at org.healthfirst.pages.MemberLoginPortal.enterUsername(MemberLoginPortal.java:34)
+at org.healthfirst.steps.HomePageStep.i_enter_username_as(HomePageStep.java:54)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at io.cucumber.java.Invoker.invoke(Invoker.java:27)
+at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)
+at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)
+at io.cucumber.core.runner.TestStep.run(TestStep.java:49)
+at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:51)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:66)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:124)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+at java.base/java.net.Socket.connect(Socket.java:633)
+at okhttp3.internal.platform.Platform.connectSocket(Platform.java:129)
+at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:245)
+... 72 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:27:23 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-03T23:27:29 EDT" duration-ms="5952" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:33:25 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-26T21:33:40 EDT" duration-ms="15494" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -47,10 +158,27 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Privacy error] but found [Member Portal | Healthfirst]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Privacy error] but found [Member Portal | Healthfirst]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at org.healthfirst.utils.Utility.verify(Utility.java:22)
+at org.healthfirst.steps.HomePageStep.i_verify_the_member_portalpage_title_as(HomePageStep.java:74)
+at ✽.I verify the member portalpage title as "Member Portal | Healthfirst"(file:///C:/Users/mahmu/OneDrive/Desktop/OSA0521202324A/eclipse-workspace/org.healthfirst/src/main/java/org/healthfirst/features/MemberLoginValidation.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:27:29 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-03T23:28:16 EDT" duration-ms="46910" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:33:40 EDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-26T21:34:18 EDT" duration-ms="37922" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -65,26 +193,26 @@
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ReactAppWrapper-wide"]/div[4]/div/div[4]/div/div/div[3]/div"}
-  (Session info: chrome=138.0.7204.97)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='username']"}
+  (Session info: chrome=139.0.7258.139)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MHK', ip: '192.168.12.101', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.97, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\mahmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a058410f784549200cbb7d54fe2a3bd9
-*** Element info: {Using=xpath, value=//*[@id="ReactAppWrapper-wide"]/div[4]/div/div[4]/div/div/div[3]/div}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\mahmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64174}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb21fdc78f804f33d4534aa94e5e12d0
+*** Element info: {Using=xpath, value=//input[@id='username']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="ReactAppWrapper-wide"]/div[4]/div/div[4]/div/div/div[3]/div"}
-  (Session info: chrome=138.0.7204.97)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='username']"}
+  (Session info: chrome=139.0.7258.139)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'MHK', ip: '192.168.12.101', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.97, chrome: {chromedriverVersion: 138.0.7204.92 (f079b9bc781e..., userDataDir: C:\Users\mahmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65302}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a058410f784549200cbb7d54fe2a3bd9
-*** Element info: {Using=xpath, value=//*[@id="ReactAppWrapper-wide"]/div[4]/div/div[4]/div/div/div[3]/div}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\mahmu\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64174}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb21fdc78f804f33d4534aa94e5e12d0
+*** Element info: {Using=xpath, value=//input[@id='username']}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -102,8 +230,8 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
-at org.healthfirst.pages.PortalLoginPage.popsUpDecline(PortalLoginPage.java:30)
+at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
+at org.healthfirst.pages.MemberLoginPortal.loginFuntion(MemberLoginPortal.java:48)
 at org.healthfirst.steps.HomePageStep.i_should_be_logged_in_successfully_with(HomePageStep.java:83)
 at ✽.I should be logged in successfully with "mahak247","MmhK@2789"(file:///C:/Users/mahmu/OneDrive/Desktop/OSA0521202324A/eclipse-workspace/org.healthfirst/src/main/java/org/healthfirst/features/MemberLoginValidation.feature:13)
 ]]>
@@ -112,15 +240,15 @@ at ✽.I should be logged in successfully with "mahak247","MmhK@2789"(file:///C:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:28:16 EDT" name="tearDownClass" finished-at="2025-07-03T23:28:18 EDT" duration-ms="1572" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:34:18 EDT" name="tearDownClass" finished-at="2025-08-26T21:34:20 EDT" duration-ms="1900" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:org.healthfirst.runner.RegrassionQA@5fbdfdcf]" started-at="2025-07-03T23:28:18 EDT" name="afterSuite" finished-at="2025-07-03T23:28:18 EDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:org.healthfirst.runner.RegrassionQA@35aea049]" started-at="2025-08-26T21:34:20 EDT" name="afterSuite" finished-at="2025-08-26T21:34:20 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
       </class> <!-- org.healthfirst.runner.RegrassionQA -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

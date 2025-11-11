@@ -29,6 +29,7 @@ public class HomePageStep {
 	@Then("I verify the homepage title as {string}")
 	public void i_verify_the_homepage_title_as(String expectedtitle) {
 		Utility.verify(expectedtitle, dr.getTitle());
+		Utility.takeScreensShot(dr, "homepage");
 	}
 
 	@And("I close the browser")
