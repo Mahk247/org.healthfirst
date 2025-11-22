@@ -2,8 +2,10 @@ package org.healthfirst.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class ScrollUpDown {
 	WebDriver dr;
@@ -25,6 +27,14 @@ public class ScrollUpDown {
 //		String masurement="window.scrollBy(0,850)";
 		js.executeScript(masurement, "");
 		Thread.sleep(2500);
+	}
+
+	public void keyBoardAction() {
+		Actions action = new Actions(dr);
+		action.moveToElement(null).perform();
+		action.keyDown(Keys.COMMAND).sendKeys("v").keyUp(Keys.COMMAND).perform();
+		action.sendKeys(Keys.ENTER).perform();
+
 	}
 
 	public void scroolDown(String byElements) {
